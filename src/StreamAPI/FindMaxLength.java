@@ -3,6 +3,8 @@ package StreamAPI;
 import java.util.Arrays;
 import java.util.List;
 
+// Find the length of the longest name in the list
+
 public class FindMaxLength {
 
     public static void main(String[] args) {
