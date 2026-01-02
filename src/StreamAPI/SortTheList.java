@@ -16,6 +16,6 @@ public class SortTheList {
                 .collect(Collectors.toList());
 
 
-        System.out.println("Min Number is :: " + sorted);
+        System.out.println("Sorted List  :: " + sorted);
     }
 }
