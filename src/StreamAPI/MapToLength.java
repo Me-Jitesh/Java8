@@ -3,6 +3,7 @@ package StreamAPI;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 // Map to length of strings
 public class MapToLength {
@@ -18,6 +19,13 @@ public class MapToLength {
         lengthMap.forEach((key, val) -> {
             System.out.println("Key = " + key + " :: " + "Length = " + val);
         });
+
+        List<Integer> lengths = fruits.stream().map(String::length).toList(); // Single Output
+
+//        Stream<Integer> integerStream = fruits.stream().map(String::length);// Single Output
+
+        System.out.println("Lengths :: " + lengths);
+
     }
 
 }
