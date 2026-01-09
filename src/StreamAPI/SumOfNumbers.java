@@ -32,6 +32,10 @@ public class SumOfNumbers {
 
         System.out.println(sum4);
 
+        int sum5 = nums.stream().reduce(0, Integer::sum);
+
+        System.out.println(sum5);
+
     }
 }
 
