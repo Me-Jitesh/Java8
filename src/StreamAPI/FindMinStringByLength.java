@@ -32,11 +32,16 @@ public class FindMinStringByLength {
 
 //        String minLen = names.stream().min(Comparator.comparing(String::length)).orElse("");
 
+//        String minLen = names
+//                .stream()
+//                .min((str1, str2) -> {
+//                    return str1.length() - str2.length();
+//                })
+//                .orElse("");
+
         String minLen = names
                 .stream()
-                .min((str1, str2) -> {
-                    return str1.length() - str2.length();
-                })
+                .reduce((a, b) -> a.length() <= b.length() ? a : b)
                 .orElse("");
 
         System.out.println(minLen);

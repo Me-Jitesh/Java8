@@ -33,11 +33,16 @@ public class FindMaxStringByLength {
 
 //        String maxLen = names.stream().max(Comparator.comparing(String::length)).orElse("");
 
+//        String maxLen = names
+//                .stream()
+//                .max((str1, str2) -> {
+//                    return str1.length() - str2.length();
+//                })
+//                .orElse("");
+
         String maxLen = names
                 .stream()
-                .max((str1, str2) -> {
-                    return str1.length() - str2.length();
-                })
+                .reduce((a, b) -> a.length() >= b.length() ? a : b)
                 .orElse("");
 
         System.out.println(maxLen);
