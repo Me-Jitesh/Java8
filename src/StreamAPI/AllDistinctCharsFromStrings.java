@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-// Find max string by length
+// All distinct chars from strings
 
 public class AllDistinctCharsFromStrings {
 
